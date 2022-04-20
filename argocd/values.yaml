@@ -1,0 +1,19 @@
+##
+# ArgoCD values
+##
+
+## Helm Repo GIT
+helmRepoUrl: https://github.com/likid0/mcgstandalone
+
+# ArgoCD apps definition
+apps:
+  deploy-mcg:
+    branch: main
+    enabled: true
+    path: mcg/
+    autosync: true
+
+namespaces:
+  - openshift-storage
+  - openshift-operators
+  - openshift-gitops
