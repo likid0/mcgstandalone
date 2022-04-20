@@ -12,7 +12,13 @@
 
 mcgstandalone:
   enabled: true
+# Select the storage class that will be used for the Noobaa database.
   scname: 'gp3-csi'
+# An example account will be created during deployment in the openshift-storage
+# namespace when createuser is enabled, although it is recommended to use object bucket claims.
+  createuser:
+    enabled: true
+    name: demo
 
 odf:
 # ODF Version/Channel
@@ -22,14 +28,14 @@ odf:
   noobaacore:
     limits:
       cpu: 1
-      memory: 2Gi
+      memory: 1Gi
     requests:
       cpu: 1
-      memory: 2Gi
+      memory: 1Gi
   noobaadb:
     limits:
       cpu: 1
-      memory: 2Gi
+      memory: 1Gi
     requests:
       cpu: 1
-      memory: 2Gi
+      memory: 1Gi
