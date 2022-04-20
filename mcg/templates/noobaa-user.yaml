@@ -4,7 +4,9 @@ kind: NooBaaAccount
 metadata:
   labels:
     app: noobaa
+  annotations:
     argocd.argoproj.io/hook: "PostSync"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
   name: {{ $.Values.mcgstandalone.createuser.name }}
   namespace: openshift-storage
 spec:
