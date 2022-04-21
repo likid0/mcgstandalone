@@ -13,7 +13,7 @@
 mcgstandalone:
   enabled: true
 # Select the storage class that will be used for the Noobaa database.
-  scname: 'gp3-csi'
+  scname: 'thin'
 # An example account will be created during deployment in the openshift-storage
 # namespace when createuser is enabled, although it is recommended to use object bucket claims.
   createuser:
