@@ -39,3 +39,10 @@ odf:
     requests:
       cpu: 500m
       memory: 700Mi
+  noobaaendpoint:
+    limits:
+      cpu: 1
+      memory: 1Gi
+    requests:
+      cpu: 500m
+      memory: 700Mi

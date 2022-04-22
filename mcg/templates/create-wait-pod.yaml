@@ -16,7 +16,7 @@ spec:
             - |
               set -x
               echo "Checking if the ODF operator has finished it's deployment"
-              sleep 180
+              sleep 120
               for i in 'name=ocs-operator' 'app=noobaa' 'app=rook-ceph-operator'
               do
                 oc wait --for condition=Ready pod  --selector=${i} -n openshift-storage --timeout=180s

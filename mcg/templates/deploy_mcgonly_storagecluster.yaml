@@ -43,4 +43,11 @@ spec:
       requests:
         cpu: '{{ .Values.odf.noobaadb.requests.cpu }}'
         memory: {{ .Values.odf.noobaadb.requests.memory }}
+    noobaa-endpoint:
+      limits:
+        cpu: '{{ .Values.odf.noobaaendpoint.limits.cpu }}'
+        memory: {{ .Values.odf.noobaaendpoint.limits.memory }}
+      requests:
+        cpu: '{{ .Values.odf.noobaaendpoint.requests.cpu }}'
+        memory: {{ .Values.odf.noobaaendpoint.requests.memory }}
 {{- end }}
