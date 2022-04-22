@@ -28,6 +28,9 @@ spec:
   multiCloudGateway:
     dbStorageClassName: '{{ .Values.mcgstandalone.scname }}'
     reconcileStrategy: standalone
+    endpoints:
+      maxCount: '{{ .Values.mcgstandalone.endpoint-workers.max }}'
+      minCount: '{{ .Values.mcgstandalone.endpoint-workers.min }}'
   resources:
     noobaa-core:
       limits:

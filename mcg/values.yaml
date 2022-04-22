@@ -1,14 +1,12 @@
 ##
-# ODF Chart values
+# MCG Chart values
 ##
 #
 
-## If MCG multi cloud gateways stand alone is enabled, only MCG will be
-#deployed no ODF/Rook/Ceph components will be used, the default SC will be use
-#for the MCG database. 
-#
-#You can configure the limit/requests for MCG standalone by modifiying the
-#odf.noobaacore and odf.noobaadb values.
+## Only MCG will be deployed no ODF/Rook/Ceph components will be deployed.
+#IMPORTAN!!: The default values regarding resources are very low and only for demo
+#purposes.
+#If more performance is needed please increase resources values as needed.
 
 mcgstandalone:
   enabled: true
@@ -19,6 +17,11 @@ mcgstandalone:
   createuser:
     enabled: true
     name: demo
+# This value is in case of load, what would be set as the HPA min/max target
+# for the noobaa-endpoint deployment.
+  endpoint-workers:
+    min: 1
+    max: 1
 
 odf:
 # ODF Version/Channel
