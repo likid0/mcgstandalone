@@ -29,8 +29,8 @@ spec:
     dbStorageClassName: '{{ .Values.mcgstandalone.scname }}'
     reconcileStrategy: standalone
     endpoints:
-      maxCount: '{{ .Values.mcgstandalone.endpoint-workers.max }}'
-      minCount: '{{ .Values.mcgstandalone.endpoint-workers.min }}'
+      maxCount: '{{ .Values.mcgstandalone.endpointworkers.max }}'
+      minCount: '{{ .Values.mcgstandalone.endpointworkers.min }}'
   resources:
     noobaa-core:
       limits:
