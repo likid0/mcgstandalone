@@ -18,8 +18,9 @@ $ vi argocd/values.yaml
 ```
 3. If you have enabled the deployment of LVMO in the argocd/values.yaml file, Make modifications to the lvmo/values.yaml file
 
+```
 $ vi lvmo/values.yaml
-
+```
 3. Make modifications to the MCG configuration as needed.
 ```
 $ vi mcg/values.yaml
