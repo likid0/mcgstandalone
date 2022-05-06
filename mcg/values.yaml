@@ -10,6 +10,10 @@
 
 mcgstandalone:
   enabled: true
+# Set the lvmo flag to enabled if you are going to use the provided logical volume operator argocd application in
+# this repo, using lvmo will give you a storage class using the disks from the
+# SNO node.
+  lvmo: disabled
 # Select the storage class that will be used for the Noobaa database.
   scname: 'odf-lvm-vg1'
 # An example account will be created during deployment in the openshift-storage
