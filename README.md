@@ -30,11 +30,16 @@ $ vi mcg/values.yaml
 ```
 $ bash setup.sh
 ```
-6. You can check that the phase state is Ready to verify MCG is up and running:
+6. Once the setup script as finished you can go into the argocd UI or use argocd cli to start the sync of the argo applications that got created, you first need to sync the LVMO app(it you are using Logical Volume Operator for your storage), and finally sync the ODF MCG app.
+```
+$ argocd app sync deploy-lvmo 
+$ argocd app sync deploy-mcg
+```
+7. You can check that the phase state is Ready to verify MCG is up and running:
 ```
 $ kubectl get noobaa noobaa -o jsonpath='{.status.phase}{"\n"}'
 ```
-7. MCG is ready to be used a default user has been created for testing,
+8. MCG is ready to be used a default user has been created for testing,
    configure your S3 client:
 
 ```
