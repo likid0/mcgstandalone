@@ -1,9 +1,10 @@
-# Multi Cloud Gateway Standalone deployment 
-Repo to deploy ODF Multi-Cloud Gateway standalone using an argoCD application
+# Logical volume Operator & Multi Cloud Gateway Standalone deployment 
+Repo to deploy ODF Multi-Cloud Gateway standalone using an argoCD application.
+This Repo has an additional helm chart to deploy the ODF Logical volume Operator.
 
 If you don't have a running instance of argocd on your OCP cluster you can run
 the setup.sh script available in the repo, it will setup a basic
-openshift-gitops instance with the mcg application.
+openshift-gitops instance with the lvmo & mcg application.
 
 1. Fork & Clone the repo 'https://github.com/likid0/mcgstandalone', using the
    gh cli in this example:
